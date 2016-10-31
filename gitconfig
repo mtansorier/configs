@@ -1,0 +1,32 @@
+[user]
+	name = Mickaël Tansorier
+	email = mickael.tansorier@openwide.fr
+[core]
+   editor = vim
+
+[color]
+   ui = true
+
+[alias]
+   co = checkout
+   st = status
+   s  = status
+   br = branch
+   d = diff
+   dc = diff --cached
+   lo  = log --name-status --abbrev-commit
+   olog = log --oneline
+   now = rev-parse --short HEAD
+   cp = cherry-pick
+
+#[push]
+#   default = simple
+
+#[branch "master"]
+#   rebase = true
+
+[sendemail]
+        smtpuser = mitan@smile.fr
+        smtpserver = smtp.smile.fr
+        smtpencryption = ssl
+        smtpserverport = 465
