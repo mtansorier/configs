@@ -1,0 +1,26 @@
+[global_config]
+  scroll_tabbar = True
+  title_inactive_bg_color = "#1f1e1e"
+  title_inactive_fg_color = "#555753"
+  title_transmit_bg_color = "#8faeff"
+  title_transmit_fg_color = "#000000"
+[keybindings]
+  next_tab = <Primary>Page_Up
+  prev_tab = <Primary>Page_Down
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Noto Mono 8
+    foreground_color = "#d3d7cf"
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#e0e4dc:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    scrollback_lines = 4096
+    use_system_font = False
