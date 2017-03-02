@@ -14,12 +14,17 @@
    br = branch
    d = diff
    dc = diff --cached
-   lo  = log --name-status --abbrev-commit
-   olog = log --oneline
    now = rev-parse --short HEAD
    cp = cherry-pick
-   lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-   lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+   # logs
+   # lg :  prefered log
+   # lgc: log commit title only
+   # lgd: log commit and its details
+   # lgb: log commit with branch
+   lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)' --all
+   lgc = log --oneline
+   lgd = log --name-status --abbrev-commit
+   lgb = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 
 
 #[push]
