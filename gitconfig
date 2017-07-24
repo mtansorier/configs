@@ -2,29 +2,38 @@
 	name = Mickaël Tansorier
 	email = mickael.tansorier@openwide.fr
 [core]
-   editor = vim
+	editor = vim
+	excludesfile = /home/micka/.gitignore
 
 [color]
-   ui = true
+	ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 
 [alias]
-   co = checkout
-   st = status
-   s  = status
-   br = branch
-   d = diff
-   dc = diff --cached
-   now = rev-parse --short HEAD
-   cp = cherry-pick
+	co = checkout
+	st = status
+	s  = status
+	br = branch
+	d = diff
+	dc = diff --cached
+	now = rev-parse --short HEAD
+	cp = cherry-pick
    # logs
-   # lg :  prefered log
+   # lg : prefered log
+   # lga: log commit all
+   # lgo: log other
    # lgc: log commit title only
    # lgd: log commit and its details
    # lgb: log commit with branch
-   lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)' --all
-   lgc = log --oneline
-   lgd = log --name-status --abbrev-commit
-   lgb = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg  = log --graph --pretty=format:'%C(yellow)%h%C(reset) - %s %C(green)(%cr) %C(dim white)<%an>%C(reset) %C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	lga = log --graph --pretty=format:'%C(yellow)%h%C(reset) - %s %C(green)(%cr) %C(cyan)<%an>%C(reset) %C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --decorate=full --all
+	lgo = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --decorate
+	lgc = log --oneline
+	lgd = log --name-status --abbrev-commit
+	lgb = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --abbrev-commit --decorate --all
 
 
 #[push]
