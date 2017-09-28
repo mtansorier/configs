@@ -35,3 +35,10 @@ augroup END
 set wildmenu
 set wildmode=longest:list,full
 
+" set E to Explore
+cabbrev E Explore
+
+" show existing tab with 4 spaces width
+set tabstop=4
+" " when indenting with '>', use 4 spaces width
+set shiftwidth=4
