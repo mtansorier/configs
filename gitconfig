@@ -1,6 +1,6 @@
 [user]
 	name = Mickaël Tansorier
-	email = mickael.tansorier@openwide.fr
+	email = mickael@tansorier.fr
 [core]
 	editor = vim
 	excludesfile = /home/micka/.gitignore
@@ -43,10 +43,11 @@
 #   rebase = true
 
 [sendemail]
-        smtpuser = mitan@smile.fr
-        smtpserver = smtp.smile.fr
+        smtpuser = mickael@tansorier.fr
+        smtpserver = ssl0.ovh.net
         smtpencryption = ssl
         smtpserverport = 465
+
 [gui]
 	fontui = -family \"DejaVu Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
