@@ -19,7 +19,7 @@ set guifont=Monospace\ 9
 " alias, tags enter with 't'
 map t <C-]>
 
-" Cursori (#F0E68C)
+" Cursor color (#F0E68C)
 highlight Cursor guifg=black guibg=#F0E68C
 
 " Cursor line
@@ -30,6 +30,10 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
+
+" 80 col line
+highlight ColorColumn ctermbg=235 guibg=#242424
+set colorcolumn=80
 
 " autocompletion
 set wildmenu
@@ -42,3 +46,7 @@ cabbrev E Explore
 set tabstop=4
 " " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+" force tab caratctere instead of space
+set noexpandtab
+
+"autocmd vimenter * NERDTree
