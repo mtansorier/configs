@@ -42,7 +42,7 @@ PS1='\[\033[00;33m\]$(print_time)\[\033[00;35m\][${debian_chroot:+($debian_chroo
 
 # For yaourt/pacman
 export VISUAL="vim"
-
+export EDITOR="vim"
 
 ### Functions ###
 
