@@ -38,11 +38,19 @@ PS1='\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\0
 PS1='\[\033[00;33m\]$(print_time)\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\033[00;36m\]\w\[\033[00;35m\]]\[\033[00;31m\]$(parse_git_branch)\n\[\033[00m\]\$ '
 
 
+### Completion ###
+
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+
+
 ### Variable ###
 
 # For yaourt/pacman
 export VISUAL="vim"
 export EDITOR="vim"
+
 
 ### Functions ###
 
