@@ -32,10 +32,18 @@ print_time() {
  printf "%*s%s\r" "$(tput cols)" "($(date +%H:%M))"
 }
 
+# print cc compilater
+print_cc() {
+ if [ ! -z "${CC}" ]
+ then
+   echo ${CC} | awk '{print " ["$1"]";}'
+ fi
+}
+
 # prompt sans heure
-PS1='\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\033[00;36m\]\w\[\033[00;35m\]]\[\033[00;31m\]$(parse_git_branch)\n\[\033[00m\]\$ '
+PS1='\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\033[00;36m\]\w\[\033[00;35m\]]\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\]$(print_cc)\n\[\033[00m\]\$ '
 # prompt avec heure
-PS1='\[\033[00;33m\]$(print_time)\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\033[00;36m\]\w\[\033[00;35m\]]\[\033[00;31m\]$(parse_git_branch)\n\[\033[00m\]\$ '
+PS1='\[\033[00;33m\]$(print_time)\[\033[00;35m\][${debian_chroot:+($debian_chroot)}\u@\h\[\033[00;35m\]:\[\033[00;36m\]\w\[\033[00;35m\]]\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\]$(print_cc)\n\[\033[00m\]\$ '
 
 
 ### Completion ###
