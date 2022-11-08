@@ -63,6 +63,22 @@ d2h(){
   echo "obase=16; $@"|bc
 }
 
+findrepo(){
+	if [ ! -z "$1" ]; then
+		find "$1" -not -path "*/\.git/*";
+	else
+		find . -not -path "*/\.git/*";
+	fi
+}
+
+findrepofiles(){
+	if [ ! -z "$1" ]; then
+		find "$1" -type f -not -path "*/\.git/*";
+	else
+		find . -type f -not -path "*/\.git/*";
+	fi
+}
+
 # kill baloo utils
 baloo_clean(){
   sudo killall baloo_file
