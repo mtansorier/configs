@@ -7,6 +7,13 @@
 [keybindings]
   next_tab = <Primary>Page_Down
   prev_tab = <Primary>Page_Up
+[profiles]
+  [[default]]
+    background_color = "#232627"
+    font = Monospace 10
+    foreground_color = "#ebdbb2"
+    scrollback_lines = 4096
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -16,11 +23,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#232627"
-    cursor_color = "#aaaaaa"
-    font = Monospace 10
-    foreground_color = "#ebdbb2"
-    scrollback_lines = 4096
-    use_system_font = False
