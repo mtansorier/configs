@@ -1,9 +1,5 @@
 [global_config]
   scroll_tabbar = True
-  title_inactive_bg_color = "#1f1e1e"
-  title_inactive_fg_color = "#555753"
-  title_transmit_bg_color = "#8faeff"
-  title_transmit_fg_color = "#000000"
 [keybindings]
   next_tab = <Primary>Page_Down
   prev_tab = <Primary>Page_Up
@@ -14,6 +10,10 @@
     foreground_color = "#ebdbb2"
     scrollback_lines = 4096
     use_system_font = False
+    title_inactive_bg_color = "#1f1e1e"
+    title_inactive_fg_color = "#555753"
+    title_transmit_bg_color = "#8faeff"
+    title_transmit_fg_color = "#000000"
 [layouts]
   [[default]]
     [[[child1]]]
